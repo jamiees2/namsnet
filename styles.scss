@@ -1,0 +1,237 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif !important;
+  font-size: 11px;
+}
+
+*:not(textarea):not(input):not(select) {
+  border: none !important;
+}
+
+a {
+  text-decoration: none;
+  &:link, &:active, &:hover {
+    text-decoration: none;
+  }
+}
+
+.menubar, .ruTableminitimetable {
+  display: none;
+}
+
+*:not(.icon):not(i) {
+  background-image: none !important;
+  &:after, &:before {
+    background-image: none !important;
+  }
+}
+
+.ruPage {
+  &>tbody>tr {
+    &:nth-child(2), &:nth-child(4) {
+      height: 0px;
+    }
+    &:nth-child(3) {
+      min-height: 100%;
+    }
+  }
+  min-height: 100%;
+}
+
+.ruHeader {
+  background-color: #333;
+  height: 44px;
+  z-index: 50;
+  display: block;
+  position: relative;
+  table {
+    height: 44px !important;
+    z-index: 50;
+  }
+  .ruHeader_left a {
+    img {
+      display: none;
+    }
+    &:before {
+      content: "Tækniskólinn";
+      font-size: 24px;
+      color: #eee !important;
+      display: block;
+      margin-top: 5px;
+      margin-left: 10px;
+    }
+  }
+  table tr > td:nth-child(2) {
+    display: none;
+  }
+}
+
+.ruHeader_right a {
+  width: 100px !important;
+  background-color: #FA6A13;
+  display: block;
+  text-align: center;
+  padding: 5px 10px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-top: -32px;
+  img {
+    display: none;
+  }
+  &:before {
+    display: block;
+    content: "Skrá út";
+  }
+}
+
+.ruTableTitle {
+  background-color: #333;
+  color: #eee !important;
+  padding: 5px;
+}
+.ruLeft, .ruRight {
+  background-color: #333;
+  display: block;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  padding-top: 44px;
+  padding: 54px 0;
+  width: 160px;
+  box-sizing: border-box;
+  word-break: break-all;
+  z-index: 25;
+  table {
+    width: 100%;
+    &:not(:last-child) {
+      padding-bottom: 10px;
+      border-bottom: 2px inset #555 !important;
+    }
+  }
+  tr {
+    height: 28px;
+  }
+  tr > td {
+    background-color: inherit;
+    font-size: 16px;
+    width: 100%;
+    padding: 0;
+    &:nth-child(1) {
+      display: none;
+    }
+    a {
+      &, &:link, &:visited{
+        color: #eee;
+        width: 100%;
+        display: block;
+        padding: 4px 0;
+        padding-left: 6px;
+        box-sizing: border-box;
+      }
+    }
+  }
+  td:not(.mainMenu_cell):not(.subMenu_selected_cell) {
+    a {
+      &:hover {
+        background-color: #1f8dd6;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+
+.ruLeft {
+  td {
+    &.subMenu_selected_cell {
+      background-color: #FA6A13;
+    }
+  }
+  td:not(.mainMenu_cell) a:active {
+    background-color: #FA6A13;
+  }
+  + td {
+    padding-left: 160px;
+    display: block;
+    width: auto !important;
+    min-height: 100% !important;
+  }
+}
+
+.ruRight {
+  position: static;
+  float: right;
+  height: 100%;
+  margin-top: -45px;
+  background-color: #fff;
+  td a {
+    &, &:link, &:visited {
+      color: #111 !important;
+    }
+  }
+  table {
+    &:first-child, &:last-child {
+      a:link {
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+
+
+.subMenu img, .subMenu_selected img, .subMenu_cell img {
+  display: none;
+}
+
+#ruTabsNewcontainer {
+  background-color: #333;
+  width: 99.05%;
+  margin-left: 3px;
+  padding-bottom: 5px;
+  .ruTabsNew {
+    li {
+      a {
+        margin-left: 3px;
+        background-color: #333;
+        border-radius: 5px;
+        span {
+          color: #fff;
+        }
+        &:hover {
+          background-color: #1f8dd6;
+        }
+      }
+      &#current {
+        a {
+          background-color: #FA6A13;
+          font-weight: bold;
+          span {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ruContentPage {
+  // padding: 0 14px 0 6px;
+}
+
+.ruFooter {
+  display: none;
+}
